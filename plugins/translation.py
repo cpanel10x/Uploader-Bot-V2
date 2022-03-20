@@ -3,136 +3,116 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 class Translation(object):
 
     START_TEXT = """
-👋 Hᴇʏ {} ♡
+👋 Xin chào {} ♡
 
-I ᴀᴍ ᴛᴇʟᴇɢʀᴀᴍ ᴍᴏsᴛ ᴘᴏᴡᴇʀғᴜʟ ᴜʀʟ ᴜᴘʟᴏᴀᴅᴇʀ ʙᴏᴛ
-
-Usᴇ ʜᴇʟᴘ ʙᴜᴛᴛᴏɴ ᴛᴏ ᴋɴᴏᴡ ʜᴏᴡ ᴛᴏ ᴜsᴇ ᴍᴇ
-
-ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ : [Tᴇʟʟʏʙᴏᴛs](https://telegram.me/TellyBots)
+Bấm HELP để xem hướng dẫn sử dụng!
 """
     HELP_TEXT = """
-ʟɪɴᴋ ᴛᴏ ᴍᴇᴅɪᴀ ᴏʀ ғɪʟᴇ
+GỬI LINK VIDEO
 
-➠ sᴇɴᴅ ᴀ ʟɪɴᴋ ғᴏʀ ᴜᴘʟᴏᴀᴅ ᴛᴏ ᴛᴇʟᴇɢʀᴀᴍ ғɪʟᴇ ᴏʀ ᴍᴇᴅɪᴀ.
+➠ Gửi liên kết cần tải VIDEO hoặc TẬP TIN
 
-sᴇᴛ ᴛʜᴜᴍʙɴᴀɪʟ
+ĐẶT HÌNH BÌA
 
-➠ sᴇɴᴅ ᴀ ᴘʜᴏᴛᴏ ᴛᴏ ᴍᴀᴋᴇ ɪᴛ ᴀs ᴘᴇʀᴍᴀɴᴇɴᴛ ᴛʜᴜᴍʙɴᴀɪʟ.
+➠ Gửi hình bất kì để đặt làm ảnh bìa cho mọi video (tùy chọn)
 
-ᴅᴇʟᴇᴛɪɴɢ ᴛʜᴜᴍʙɴᴀɪʟ
+XÓA HÌNH BÌA
 
-➠ sᴇɴᴅ /delthumb ᴛᴏ ᴅᴇʟᴇᴛᴇ ᴛʜᴜᴍʙɴᴀɪʟ.
+➠ Gửi lệnh /delthumb để xóa hình bìa
 
-sᴇᴛᴛɪɴɢs
+CÀI ĐẶT
 
-➠ ᴄᴏɴғɪɢᴜʀᴇ ᴍʏ sᴇᴛᴛɪɴɢs ᴛᴏ ᴄʜᴀɴɢᴇ ᴜᴘʟᴏᴀᴅ ᴍᴏᴅᴇ
+➠ Cài đặt cấu hình
 
-sʜᴏᴡ ᴛʜᴜᴍʙɴᴀɪʟ
+XEM HÌNH BÌA
 
-➠ sᴇɴᴅ /showthumb ᴛᴏ ᴠɪᴇᴡ ᴄᴜsᴛᴏᴍ ᴛʜᴜᴍʙɴᴀɪʟ.
-
-ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ : [Tᴇʟʟʏʙᴏᴛs](https://telegram.me/TellyBots)
+➠ Gửi /showthumb để xem hình bìa tùy chọn
  
 """
     ABOUT_TEXT = """
-**Mʏ ɴᴀᴍᴇ** : [ᴜᴘʟᴏᴀᴅᴇʀ ʙᴏᴛ](http://t.me/TellyUploaderRobot)
+**LIÊN HỆ** : [ᴜᴘʟᴏᴀᴅᴇʀ ʙᴏᴛ](http://t.me/cpanel10x)
 
-**Cʜᴀɴɴᴇʟ** : [Tᴇʟʟʏʙᴏᴛs](https://t.me/TellyBots)
-
-**Vᴇʀꜱɪᴏɴ** : [2.0 ʙᴇᴛᴀ](https://t.me/TellyUploaderRobot)
-
-**Sᴏᴜʀᴄᴇ** : [ᴄʟɪᴄᴋ ʜᴇʀᴇ](https://t.me/tellybots_digital)
-
-**Sᴇʀᴠᴇʀ** : [ʜᴇʀᴏᴋᴜ](https://heroku.com/)
-
-**Lᴀɴɢᴜᴀɢᴇ :** [Pʏᴛʜᴏɴ 3.10.2](https://www.python.org/)
-
-**Fʀᴀᴍᴇᴡᴏʀᴋ :** [ᴘʏʀᴏɢᴀᴍ 1.3.6](https://docs.pyrogram.org/)
-
-**Dᴇᴠᴇʟᴏᴘᴇʀ :** [Tᴇʟʟʏʙᴏᴛs](https://t.me/tellybots)
-
-**ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ :** [NᴀʏsᴀBᴏᴛs](https://t.me/NaysaBots)
+**KÊNH : [DLCBOT](https://t.me/dlcvietnam)
 
 """
 
 
     PROGRESS = """
-🔰 Sᴘᴇᴇᴅ : {3}/s\n\n
-🌀 Dᴏɴᴇ : {1}\n\n
-🎥 Tᴏᴛᴀʟ sɪᴢᴇ  : {2}\n\n
-⏳ Tɪᴍᴇ ʟᴇғᴛ : {4}\n\n
+🔰 Tốc độ : {3}/s\n\n
+🌀 Hoàn thành : {1}\n\n
+🎥 Kích thước  : {2}\n\n
+⏳ Thời gian còn lại : {4}\n\n
 """
 
 
     START_BUTTONS = InlineKeyboardMarkup(
         [[
-        InlineKeyboardButton('🗜️ sᴇᴛᴛɪɴɢs', callback_data='OpenSettings')
+        InlineKeyboardButton('🗜️ Cài đặt', callback_data='OpenSettings')
         ],[
-        InlineKeyboardButton('❔ ʜᴇʟᴘ', callback_data='help'),
-        InlineKeyboardButton('👨‍🚒 ᴀʙᴏᴜᴛ', callback_data='about')
+        InlineKeyboardButton('❔ Hướng dẫn', callback_data='help'),
+        InlineKeyboardButton('👨‍🚒 Thông tin', callback_data='about')
         ],[
-        InlineKeyboardButton('♨️ ᴄʟᴏsᴇ', callback_data='close')
+        InlineKeyboardButton('ĐÓNG', callback_data='close')
         ]]
     )
     HELP_BUTTONS = InlineKeyboardMarkup(
         [[
-        InlineKeyboardButton('🏡 ʜᴏᴍᴇ', callback_data='home'),
-        InlineKeyboardButton('👨‍🚒 ᴀʙᴏᴜᴛ', callback_data='about')
+        InlineKeyboardButton('🏡 Home', callback_data='home'),
+        InlineKeyboardButton('👨‍🚒 Thông tin' callback_data='about')
         ],[
-        InlineKeyboardButton('♨️ ᴄʟᴏsᴇ', callback_data='close')
+        InlineKeyboardButton('ĐÓNG', callback_data='close')
         ]]
     )
     ABOUT_BUTTONS = InlineKeyboardMarkup(
         [[
-        InlineKeyboardButton('🏡 ʜᴏᴍᴇ', callback_data='home'),
-        InlineKeyboardButton('❔ ʜᴇʟᴘ', callback_data='help')
+        InlineKeyboardButton('🏡 Home', callback_data='home'),
+        InlineKeyboardButton('❔ Hướng dẫn', callback_data='help')
         ],[
-        InlineKeyboardButton('♨️ ᴄʟᴏsᴇ', callback_data='close')
+        InlineKeyboardButton('ĐÓNG', callback_data='close')
         ]]
     )
     BUTTONS = InlineKeyboardMarkup(
         [[
-        InlineKeyboardButton('♨️ ᴄʟᴏsᴇ', callback_data='close')
+        InlineKeyboardButton('ĐÓNG', callback_data='close')
         ]]
     )
-    TEXT = "sᴇɴᴅ ᴍᴇ ᴀɴʏ ᴄᴜsᴛᴏᴍ ᴛʜᴜᴍʙɴᴀɪʟ ᴛᴏ sᴇᴛ ɪᴛ"
-    IFLONG_FILE_NAME = " Only 64 characters can be named . "
-    RENAME_403_ERR = "Sorry. You are not permitted to rename this file."
+    TEXT = "Gửi hình bất kì để làm ảnh bìa cho video"
+    IFLONG_FILE_NAME = " Tên file chứa tối đa 64 ký tự. "
+    RENAME_403_ERR = "Xin lỗi, bạn không có quyền đổi tên file."
     ABS_TEXT = " Please don't be selfish."
     UPGRADE_TEXT = "<b>No preminum plans available in this bot </b>  /help for Details"
-    FORMAT_SELECTION = "Nᴏᴡ Sᴇʟᴇᴄᴛ Tʜᴇ Dᴇsɪʀᴇᴅ Fᴏʀᴍᴀᴛ ᴏʀ Fɪʟᴇ 🗄️ Sɪᴢᴇ ᴛᴏ Uᴘʟᴏᴀᴅ"
+    FORMAT_SELECTION = "Chọn định dạng hoặc kích thước 🗄️ để muốn tải"
     SET_CUSTOM_USERNAME_PASSWORD = """"""
     NOYES_URL = "@robot URL detected. Please use https://shrtz.me/PtsVnf6 and get me a fast URL so that I can upload to Telegram, without me slowing down for other users."
-    DOWNLOAD_FILE = "📥 Downloading  File "
-    UPLOAD_FILE = " UploadinG 📤 \n\n To  transfer.sh "
-    ANNO_UPLOAD = " UploadinG📤 \n\n To  anonfiles.com "
-    BAY_UPLOAD = " UploadinG📤 \n\n To  bayfiles.com "
-    GO_FILE_UPLOAD = " 📤UploadinG📤 \n\n To  gofile.io "
-    DOWNLOAD_START = "Dᴏᴡɴʟᴏᴀᴅɪɴɢ ᴛᴏ ᴍʏ sᴇʀᴠᴇʀ ᴘʟᴇᴀsᴇ ᴡᴀɪᴛ  ⏳"
-    UPLOAD_START = "📤 Uᴘʟᴏᴀᴅɪɴɢ Pʟᴇᴀsᴇ Wᴀɪᴛ"
-    RCHD_BOT_API_LIMIT = "size greater than maximum allowed size (50MB). Neverthless, trying to upload."
-    RCHD_TG_API_LIMIT = "Downloaded in {} seconds.\nDetected File Size: {}\nSorry. But, I cannot upload files greater than 2GB due to Telegram API limitations."
-    AFTER_SUCCESSFUL_UPLOAD_MSG = " JOIN : https://t.me/TGBotsCollection\nFor the List of Telegram Bots"
-    AFTER_SUCCESSFUL_UPLOAD_MSG_WITH_TS = "Dᴏᴡɴʟᴏᴀᴅᴇᴅ ɪɴ {} sᴇᴄᴏɴᴅs.\n\nTʜᴀɴᴋs Fᴏʀ Usɪɴɢ Mᴇ\n\nUᴘʟᴏᴀᴅᴇᴅ ɪɴ {} sᴇᴄᴏɴᴅs"
-    NOT_AUTH_USER_TEXT = "Please /upgrade your subscription."
-    NOT_AUTH_USER_TEXT_FILE_SIZE = "Detected File Size: {}. Free Users can only upload: {}\nPlease /upgrade your subscription.\nIf you think this is a bug, please contact <a href='https://telegram.dog/ThankTelegram'>@SpEcHlDe</a>"
-    SAVED_CUSTOM_THUMB_NAIL = "Cᴜsᴛᴏᴍ ᴠɪᴅᴇᴏ / ғɪʟᴇ ᴛʜᴜᴍʙɴᴀɪʟ sᴀᴠᴇᴅ. Tʜɪs ɪᴍᴀɢᴇ ᴡɪʟʟ ʙᴇ ᴜsᴇᴅ ɪɴ ᴛʜᴇ ᴠɪᴅᴇᴏ / ғɪʟᴇ."
-    DEL_ETED_CUSTOM_THUMB_NAIL = "✅ Cᴜsᴛᴏᴍ ᴛʜᴜᴍʙɴᴀɪʟ ᴄʟᴇᴀʀᴇᴅ sᴜᴄᴄᴇsғᴜʟʟʏ"
+    DOWNLOAD_FILE = "📥 Đang tải "
+    UPLOAD_FILE = " Đang upload 📤 \n\n lên transfer.sh "
+    ANNO_UPLOAD = " Đang upload 📤 \n\n lên anonfiles.com "
+    BAY_UPLOAD = " Đang upload 📤 \n\n lên bayfiles.com "
+    GO_FILE_UPLOAD = " 📤Đang upload📤 \n\n lên gofile.io "
+    DOWNLOAD_START = "Đang xử lí...⏳"
+    UPLOAD_START = "📤 Đang gửi..."
+    RCHD_BOT_API_LIMIT = "kích thước lớn hơn quy định (50MB). Đang thử lại."
+    RCHD_TG_API_LIMIT = "Đã tải về trong {} giây.\nPhát hiện kích thước: {}\nXin lỗi, telegram chỉ cho phép file tối đa 2GB."
+    AFTER_SUCCESSFUL_UPLOAD_MSG = "Hoàn tất"
+    AFTER_SUCCESSFUL_UPLOAD_MSG_WITH_TS = "Xử lí trong vòng {} giây.\n\nCảm ơn đã xử dụng\n\nHoàn tất gửi file sau {} giây"
+    NOT_AUTH_USER_TEXT = "Vui lòng gõ /upgrade để nâng cấp."
+    NOT_AUTH_USER_TEXT_FILE_SIZE = "Phát hiện kích thước: {}. Thành viên miễn phí bị giới hạn: {}\nVui lòng gõ /upgrade để nâng cấp.\nNếu đây là lỗi vui lòng liên hệ <a href='https://telegram.dog/cpanel10x'>@cpanel10x</a>"
+    SAVED_CUSTOM_THUMB_NAIL = "Đã lưu ảnh bìa tùy chọn."
+    DEL_ETED_CUSTOM_THUMB_NAIL = "✅ Đã xóa ảnh bìa tùy chọn"
     FF_MPEG_DEL_ETED_CUSTOM_MEDIA = "✅ Media cleared succesfully."
     SAVED_RECVD_DOC_FILE = "Document Downloaded Successfully."
     CUSTOM_CAPTION_UL_FILE = " "
-    NO_CUSTOM_THUMB_NAIL_FOUND = "Nᴏ ᴄᴜsᴛᴏᴍ ᴛʜᴜᴍʙɴᴀɪʟ ғᴏᴜɴᴅ"
-    NO_VOID_FORMAT_FOUND = "ERROR... <code>{}</code>"
-    FILE_NOT_FOUND = "Error, File not Found!!"
+    NO_CUSTOM_THUMB_NAIL_FOUND = "Không có ảnh bìa tùy chọn"
+    NO_VOID_FORMAT_FOUND = "Lỗi... <code>{}</code>"
+    FILE_NOT_FOUND = "Lỗi... Không tìm thấy file!!"
     USER_ADDED_TO_DB = "User <a href='tg://user?id={}'>{}</a> added to {} till {}."
-    SOMETHING_WRONG = "<code>Something Wrong. Try again.</code>"
+    SOMETHING_WRONG = "<code>Có lỗi xảy ra, vui lòng thử lại.</code>"
     REPLY_TO_DOC_GET_LINK = "Reply to a Telegram media to get High Speed Direct Download Link"
     REPLY_TO_DOC_FOR_C2V = "Reply to a Telegram media to convert"
     REPLY_TO_DOC_FOR_SCSS = "Reply to a Telegram media to get screenshots"
     REPLY_TO_DOC_FOR_RENAME_FILE = "Reply to a Telegram media to /ren with custom thumbnail support"
-    AFTER_GET_LINK = " <b>File Name :</b> <code>{}</code>\n<b>File Size :</b> {}\n\n<b>⚡Link⚡ :</b> <code>{}</code>\n\nJoin : @Tellybots_4u"
-    AFTER_GET_DL_LINK = " <b>File Name :</b> <code>{}</code>\n<b>File Size :</b> {}\n\n<b>⚡Link⚡ :</b> <code>{}</code>\n\nValid for <b>14</b> days.\nJoin : @Tellybots_4u"
+    AFTER_GET_LINK = " <b>File Name :</b> <code>{}</code>\n<b>File Size :</b> {}\n\n<b>⚡Link⚡ :</b> <code>{}</code>\n"
+    AFTER_GET_DL_LINK = " <b>File Name :</b> <code>{}</code>\n<b>File Size :</b> {}\n\n<b>⚡Link⚡ :</b> <code>{}</code>\n\nValid for <b>14</b> days."
     #AFTER_GET_DL_LINK = " {} valid for 30 or more days.\n\n Join : @Tellybots_4u \n For the list of Telegram bots. "
     AFTER_GET_GOFILE_LINK = " <b>File Name :</b> <code>{}</code>\n<b>File Size :</b> {}\n<b>File MD5 Checksum :</b> <code>{}</code>\n\n<b>⚡Link⚡ :</b> <code>{}</code>\n\n Valid untill 10 days of inactivity\nJoin : @TGBotsCollection"
     FF_MPEG_RO_BOT_RE_SURRECT_ED = """Syntax: /trim HH:MM:SS for screenshot of that specific time."""
