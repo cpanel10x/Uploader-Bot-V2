@@ -58,7 +58,7 @@ XEM HÌNH BÌA
     HELP_BUTTONS = InlineKeyboardMarkup(
         [[
         InlineKeyboardButton('🏡 Home', callback_data='home'),
-        InlineKeyboardButton('👨‍🚒 Thông tin' callback_data='about')
+        InlineKeyboardButton('👨‍🚒 Thông tin', callback_data='about')
         ],[
         InlineKeyboardButton('ĐÓNG', callback_data='close')
         ]]
