@@ -12,10 +12,10 @@ async def handle_force_subscribe(bot, message):
         return 400
     try:
         user = await bot.get_chat_member(int(Config.UPDATES_CHANNEL), message.from_user.id)
-        if user.status == "kicked":
+        if user.status == "banned":
             await bot.send_message(
                 chat_id=message.from_user.id,
-                text="Sorry Sir, You are Banned. Contact My [Support Group](https://t.me/cpanel10x).",
+                text="Bạn đã bị cấm sử dụng tài nguyên, vui lòng lòng liên hệ để biết thêm chi tiết [Support Group](https://t.me/cpanel10x).",
                 parse_mode="markdown",
                 disable_web_page_preview=True,
                 reply_to_message_id=message.message_id,
@@ -24,11 +24,11 @@ async def handle_force_subscribe(bot, message):
     except UserNotParticipant:
         await bot.send_message(
             chat_id=message.from_user.id,
-            text="Vui lòng đăng ký theo dõi kênh DLC Media để sử dụng !",
+            text="Vui lòng đăng ký theo dõi kênh DLC Việt Nam để sử dụng !",
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("🤖 Theo dõi DLC Channel 🤖", url=invite_link.invite_link)
+                        InlineKeyboardButton("🤖 Theo dõi DLC Việt Nam 🤖", url=invite_link.invite_link)
                     ]
                 ]
             ),
