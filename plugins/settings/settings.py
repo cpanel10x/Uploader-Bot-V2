@@ -17,24 +17,24 @@ async def OpenSettings(m: "types.Message"):
     #generate_sample_video = user_data.get("generate_sample_video", False)
     generate_ss = user_data.get("generate_ss", False)
     buttons_markup = [
-        [types.InlineKeyboardButton(f"ᴜᴘʟᴏᴀᴅ ᴀs {'🎥 ᴠɪᴅᴇᴏ' if upload_as_doc else '🗃️ ғɪʟᴇ'}",
+        [types.InlineKeyboardButton(f"Gửi dạng {'🎥 Video' if upload_as_doc else '🗃️ File'}",
                                     callback_data="triggerUploadMode")],
         #[types.InlineKeyboardButton(f"Generate Sample Video {'✅' if generate_sample_video else '❌'}", 
                                     #callback_data="triggerGenSample")],
-        [types.InlineKeyboardButton(f"🖼️ ʀᴇᴄᴇɪᴠᴇ sᴄʀᴇᴇɴsʜᴏᴛs {'✅' if generate_ss else '✖️'}", 
+        [types.InlineKeyboardButton(f"🖼️ Xem ảnh chụp video {'✅' if generate_ss else '✖️'}", 
                                     callback_data="triggerGenSS")],
-        [types.InlineKeyboardButton(f"{'ᴄʜᴀɴɢᴇ' if thumbnail else '🌃 sᴇᴛ'} ᴛʜᴜᴍʙɴᴀɪʟ",
+        [types.InlineKeyboardButton(f"{'Thay' if thumbnail else '🌃 Đặt'} ảnh bìa",
                                     callback_data="setThumbnail")]
     ]
     if thumbnail:
-        buttons_markup.append([types.InlineKeyboardButton("🌆 sʜᴏᴡ ᴛʜᴜᴍʙɴᴀɪʟ",
+        buttons_markup.append([types.InlineKeyboardButton("🌆 Xem ảnh bìa",
                                                           callback_data="showThumbnail")])
     buttons_markup.append([types.InlineKeyboardButton("♨️ ᴄʟᴏsᴇ",
                                                       callback_data="close")])
 
     try:
         await m.edit(
-            text="**ʜᴇʀᴇ ʏᴏᴜ ᴄᴀɴ sᴇᴛᴜᴘ ʏᴏᴜʀ sᴇᴛᴛɪɴɢs**",
+            text="**Cài đặt cấu hình tại đây**",
             reply_markup=types.InlineKeyboardMarkup(buttons_markup),
             disable_web_page_preview=True,
             parse_mode="Markdown"
