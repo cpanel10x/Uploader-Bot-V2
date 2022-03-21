@@ -113,7 +113,7 @@ async def echo(bot, update):
             url,
             "--proxy", Config.HTTP_PROXY
         ]
-    elif "taobao" in url:
+    elif "tmall" in url:
         command_to_exec = [
             "yt-dlp",
             "--cookies",
