@@ -116,6 +116,8 @@ async def echo(bot, update):
     elif "taobao" in url:
         command_to_exec = [
             "yt-dlp",
+            "--cookies",
+            "taobao.txt",
             "--proxy",
             "http://taobaobots:NguyenVu6688@149.28.144.210:3128",
             "--no-warnings",
