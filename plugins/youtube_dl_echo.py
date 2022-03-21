@@ -26,6 +26,7 @@ from pyrogram.errors import UserNotParticipant
 from functions.ran_text import random_char
 from plugins.database.add import add_user_to_database
 from pyrogram.types import Thumbnail
+from urllib.parse import parse_qs, urlparse
 
 @Client.on_message(filters.private & filters.regex(pattern=".*http.*"))
 async def echo(bot, update):
@@ -62,8 +63,9 @@ async def echo(bot, update):
     file_name = None
 
     print(url)
-    if "tmall" in url:
-      url = "https://detail.tmall.com/item.htm?id=643490323327"
+    if "taobao" in url:
+      vid = parse_qs(urlparse(url).query).get('id')
+      url = "https://item.taobao.com/item.htm?id="+vid
       
     if "|" in url:
         url_parts = url.split("|")
