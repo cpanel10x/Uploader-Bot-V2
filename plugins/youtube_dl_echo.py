@@ -62,6 +62,9 @@ async def echo(bot, update):
     file_name = None
 
     print(url)
+    if "tmall" in url:
+      url = "https://detail.tmall.com/item.htm?id=643490323327"
+      
     if "|" in url:
         url_parts = url.split("|")
         if len(url_parts) == 2:
