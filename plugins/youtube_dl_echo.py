@@ -65,7 +65,7 @@ async def echo(bot, update):
     print(url)
     if "taobao" in url:
       vid = parse_qs(urlparse(url).query).get('id')
-      url = "https://item.taobao.com/item.htm?id="+vid
+      url = "https://item.taobao.com/item.htm?id=" + str(vid)
       
     if "|" in url:
         url_parts = url.split("|")
