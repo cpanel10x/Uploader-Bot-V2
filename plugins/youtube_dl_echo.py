@@ -63,9 +63,9 @@ async def echo(bot, update):
     file_name = None
 
     print(url)
-    if "taobao" in url:
-      vid = parse_qs(urlparse(url).query).get('id')
-      url = "https://item.taobao.com/item.htm?id=" + str(vid[0])
+    #if "taobao" in url:
+    #  vid = parse_qs(urlparse(url).query).get('id')
+    #  url = "https://item.taobao.com/item.htm?id=" + str(vid[0])
       
     if "|" in url:
         url_parts = url.split("|")
@@ -119,7 +119,19 @@ async def echo(bot, update):
             "--cookies",
             "taobao.txt",
             "--proxy",
-            "http://taobaobots:NguyenVu6688@149.28.144.210:3128",
+            Config.TAOBAO_PROXY,
+            "--no-warnings",
+            "--youtube-skip-dash-manifest",
+            "-j",
+            url
+        ]
+     elif "taobao" in url:
+        command_to_exec = [
+            "yt-dlp",
+            "--cookies",
+            "taobao.txt",
+            "--proxy",
+            Config.TAOBAO_PROXY,
             "--no-warnings",
             "--youtube-skip-dash-manifest",
             "-j",
