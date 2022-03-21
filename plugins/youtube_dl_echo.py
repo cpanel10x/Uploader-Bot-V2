@@ -116,7 +116,8 @@ async def echo(bot, update):
     elif "taobao" in url:
         command_to_exec = [
             "yt-dlp",
-            "--cookies taobao.txt",
+            "--cookies",
+            "taobao.txt",
             "--no-warnings",
             "--youtube-skip-dash-manifest",
             "-j",
