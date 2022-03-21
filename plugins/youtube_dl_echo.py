@@ -116,6 +116,7 @@ async def echo(bot, update):
     else:
         command_to_exec = [
             "yt-dlp",
+            "-vU",
             "--no-warnings",
             "--youtube-skip-dash-manifest",
             "-j",
