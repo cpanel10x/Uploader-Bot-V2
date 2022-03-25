@@ -148,7 +148,7 @@ async def youtube_dl_call_back(bot, update):
         command_to_exec.append(Config.TAOBAO_PROXY)
     if "douyin" in youtube_dl_url:
         command_to_exec.append("--cookies")
-        command_to_exec.append(COOKIES_LOCATION + "/douyin.txt")
+        command_to_exec.append(Config.COOKIES_LOCATION + "/douyin.txt")
     if "tmall" in youtube_dl_url:
         command_to_exec.append("--cookies")
         command_to_exec.append("/home/ubuntu/taobao.txt")
