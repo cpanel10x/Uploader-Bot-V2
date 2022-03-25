@@ -122,7 +122,7 @@ async def echo(bot, update):
         command_to_exec = [
             "yt-dlp",
             "--cookies",
-            Config.DOWNLOAD_LOCATION + "/douyin.txt",
+            Config.COOKIES_LOCATION + "/douyin.txt",
             "--no-warnings",
             "--youtube-skip-dash-manifest",
             "-j",
