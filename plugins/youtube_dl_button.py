@@ -14,6 +14,7 @@ import math
 import os
 import shutil
 import time
+import urllib.parse
 from datetime import datetime
 from functions.help_Nekmo_ffmpeg import generate_screen_shots
 from plugins.config import Config
@@ -25,6 +26,7 @@ from functions.display_progress import progress_for_pyrogram, humanbytes
 from plugins.database.database import db
 from PIL import Image
 from functions.ran_text import random_char
+from urllib.parse import parse_qs, urlparse
 FormtDB = {}
 
 async def youtube_dl_call_back(bot, update):
@@ -53,6 +55,15 @@ async def youtube_dl_call_back(bot, update):
         "_" + youtube_dl_format + "." + youtube_dl_ext
     youtube_dl_username = None
     youtube_dl_password = None
+    if "item.taobao.com" in youtube_dl_url:
+      vid = parse_qs(urlparse(youtube_dl_url).query).get('id')
+      youtube_dl_url = "https://world.taobao.com/item/" + str(vid[0]) + ".htm"
+    if "intl.taobao.com" in youtube_dl_url:
+      vid = parse_qs(urlparse(youtube_dl_url).query).get('id')
+      youtube_dl_url = "https://world.taobao.com/item/" + str(vid[0]) + ".htm"
+    if "tmall.com" in youtube_dl_url:
+      vid = parse_qs(urlparse(youtube_dl_url).query).get('id')
+      youtube_dl_url = "https://world.taobao.com/item/" + str(vid[0]) + ".htm" 
     if "|" in youtube_dl_url:
         url_parts = youtube_dl_url.split("|")
         if len(url_parts) == 2:
@@ -130,6 +141,19 @@ async def youtube_dl_call_back(bot, update):
             "--hls-prefer-ffmpeg", youtube_dl_url,
             "-o", download_directory
         ]
+    if "taobao" in youtube_dl_url:
+        command_to_exec.append("--cookies")
+        command_to_exec.append("/home/ubuntu/taobao.txt")
+        command_to_exec.append("--proxy")
+        command_to_exec.append(Config.TAOBAO_PROXY)
+    if "douyin" in youtube_dl_url:
+        command_to_exec.append("--cookies")
+        command_to_exec.append(Config.DOWNLOAD_LOCATION + "/douyin.txt")
+    if "tmall" in youtube_dl_url:
+        command_to_exec.append("--cookies")
+        command_to_exec.append("/home/ubuntu/taobao.txt")
+        command_to_exec.append("--proxy")
+        command_to_exec.append(Config.TAOBAO_PROXY)
     if Config.HTTP_PROXY != "":
         command_to_exec.append("--proxy")
         command_to_exec.append(Config.HTTP_PROXY)

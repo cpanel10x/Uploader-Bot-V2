@@ -10,6 +10,7 @@ import math
 import os
 import shutil
 import time
+import urllib.parse
 from datetime import datetime
 from plugins.config import Config
 from plugins.translation import Translation
@@ -20,6 +21,7 @@ from functions.display_progress import progress_for_pyrogram, humanbytes, TimeFo
 from hachoir.metadata import extractMetadata
 from hachoir.parser import createParser
 from PIL import Image
+from urllib.parse import parse_qs, urlparse
 
 
 
@@ -33,6 +35,15 @@ async def ddl_call_back(bot, update):
         "/" + str(update.from_user.id) + ".jpg"
     youtube_dl_url = update.message.reply_to_message.text
     custom_file_name = os.path.basename(youtube_dl_url)
+    if "item.taobao.com" in youtube_dl_url:
+      vid = parse_qs(urlparse(youtube_dl_url).query).get('id')
+      youtube_dl_url = "https://world.taobao.com/item/" + str(vid[0]) + ".htm"
+    if "intl.taobao.com" in youtube_dl_url:
+      vid = parse_qs(urlparse(youtube_dl_url).query).get('id')
+      youtube_dl_url = "https://world.taobao.com/item/" + str(vid[0]) + ".htm"
+    if "tmall.com" in youtube_dl_url:
+      vid = parse_qs(urlparse(youtube_dl_url).query).get('id')
+      youtube_dl_url = "https://world.taobao.com/item/" + str(vid[0]) + ".htm" 
     if "|" in youtube_dl_url:
         url_parts = youtube_dl_url.split("|")
         if len(url_parts) == 2:

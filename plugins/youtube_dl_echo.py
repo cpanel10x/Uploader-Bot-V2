@@ -63,10 +63,15 @@ async def echo(bot, update):
     file_name = None
 
     print(url)
-    #if "taobao" in url:
-    #  vid = parse_qs(urlparse(url).query).get('id')
-    #  url = "https://item.taobao.com/item.htm?id=" + str(vid[0])
-      
+    if "item.taobao.com" in url:
+      vid = parse_qs(urlparse(url).query).get('id')
+      url = "https://world.taobao.com/item/" + str(vid[0]) + ".htm"
+    if "intl.taobao.com" in url:
+      vid = parse_qs(urlparse(url).query).get('id')
+      url = "https://world.taobao.com/item/" + str(vid[0]) + ".htm"
+    if "tmall.com" in url:
+      vid = parse_qs(urlparse(url).query).get('id')
+      url = "https://world.taobao.com/item/" + str(vid[0]) + ".htm" 
     if "|" in url:
         url_parts = url.split("|")
         if len(url_parts) == 2:
@@ -113,12 +118,21 @@ async def echo(bot, update):
             url,
             "--proxy", Config.HTTP_PROXY
         ]
+    elif "douyin" in url:
+        command_to_exec = [
+            "yt-dlp",
+            "--cookies",
+            Config.DOWNLOAD_LOCATION + "/douyin.txt",
+            "--no-warnings",
+            "--youtube-skip-dash-manifest",
+            "-j",
+            url
+        ]
     elif "tmall" in url:
         command_to_exec = [
             "yt-dlp",
-            "-vU",
             "--cookies",
-            "/taobao.txt",
+            "/home/ubuntu/taobao.txt",
             "--proxy",
             Config.TAOBAO_PROXY,
             "--no-warnings",
@@ -129,9 +143,8 @@ async def echo(bot, update):
     elif "taobao" in url:
         command_to_exec = [
             "yt-dlp",
-            "-vU",
             "--cookies",
-            "taobao.txt",
+            "/home/ubuntu/taobao.txt",
             "--proxy",
             Config.TAOBAO_PROXY,
             "--no-warnings",
