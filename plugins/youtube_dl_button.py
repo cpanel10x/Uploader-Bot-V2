@@ -154,6 +154,16 @@ async def youtube_dl_call_back(bot, update):
         command_to_exec.append("/home/ubuntu/taobao.txt")
         command_to_exec.append("--proxy")
         command_to_exec.append(Config.TAOBAO_PROXY)
+    if "fb.watch" in youtube_dl_url:
+        command_to_exec.append("--cookies")
+        command_to_exec.append(Config.COOKIES_LOCATION + "/fb.txt")
+        command_to_exec.append("--proxy")
+        command_to_exec.append(Config.TAOBAO_PROXY)
+    if "facebook" in youtube_dl_url:
+        command_to_exec.append("--cookies")
+        command_to_exec.append(Config.COOKIES_LOCATION + "/fb.txt")
+        command_to_exec.append("--proxy")
+        command_to_exec.append(Config.TAOBAO_PROXY)
     if Config.HTTP_PROXY != "":
         command_to_exec.append("--proxy")
         command_to_exec.append(Config.HTTP_PROXY)
