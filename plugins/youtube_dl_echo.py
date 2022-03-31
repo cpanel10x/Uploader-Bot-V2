@@ -128,6 +128,30 @@ async def echo(bot, update):
             "-j",
             url
         ]
+    elif "fb.watch" in url:
+        command_to_exec = [
+            "yt-dlp",
+            "--cookies",
+            Config.COOKIES_LOCATION + "/fb.txt",
+            "--proxy",
+            Config.TAOBAO_PROXY,
+            "--no-warnings",
+            "--youtube-skip-dash-manifest",
+            "-j",
+            url
+        ]
+    elif "facebook" in url:
+        command_to_exec = [
+            "yt-dlp",
+            "--cookies",
+            Config.COOKIES_LOCATION + "/fb.txt",
+            "--proxy",
+            Config.TAOBAO_PROXY,
+            "--no-warnings",
+            "--youtube-skip-dash-manifest",
+            "-j",
+            url
+        ]
     elif "tmall" in url:
         command_to_exec = [
             "yt-dlp",
