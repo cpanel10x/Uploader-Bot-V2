@@ -3,14 +3,14 @@ beautifulsoup4
 hachoir
 numpy
 Pillow
-pyrogram
+pyrogram==1.4.16
 requests
 tgcrypto
 git+https://github.com/dlcvietnam/yt-dlp#egg=yt-dlp
 yt-dlp
 olefile
-motor
-pymongo
+motor==2.5.1
+pymongo==3.12.3
 dnspython
 psutil
 loggers
