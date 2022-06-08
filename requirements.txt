@@ -6,7 +6,7 @@ Pillow
 pyrogram
 requests
 tgcrypto
-git+https://github.com/cpanel10x/yt-dlp@taobao#egg=yt-dlp
+git+https://github.com/dlcvietnam/yt-dlp#egg=yt-dlp
 yt-dlp
 olefile
 motor
